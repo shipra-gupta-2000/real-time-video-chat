@@ -1,14 +1,14 @@
 {
   "name": "zoom-clone",
   "version": "1.0.0",
-  "description": "",
+  "description": "zoom and meet like facility",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "shipra",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -20,5 +20,13 @@
     "peerjs": "^1.3.1",
     "socket.io": "^2.3.0",
     "uuid": "^8.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shipra-gupta-2000/real_time_video-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shipra-gupta-2000/real_time_video-chat/issues"
+  },
+  "homepage": "https://github.com/shipra-gupta-2000/real_time_video-chat#readme"
 }

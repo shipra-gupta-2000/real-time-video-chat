@@ -3,7 +3,8 @@ const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
-  port: '443'
+  port: '3030'
+  //443
 })
 let myVideoStream;
 const myVideo = document.createElement('video')
@@ -55,6 +56,7 @@ navigator.mediaDevices.getUserMedia({
 })
 
 socket.on('user-disconnected', userId => {
+  console.log("user_disconnected")
   if (peers[userId]) peers[userId].close();
   $('.'+userId).remove();
 })
@@ -199,3 +201,9 @@ let person = prompt("Please enter your name", "user");
 if(person=="")person="user"
 window.localStorage.setItem("user",person);
 
+
+const leaveRoom=()=>{
+  console.log("left room");
+  socket.emit("disconnected",{});
+  location.reload();
+}
