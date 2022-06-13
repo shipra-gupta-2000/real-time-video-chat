@@ -196,9 +196,9 @@ const offParticipant=()=>{
 }
 
 
-
-let person = prompt("Please enter your name", "user");
-if(person=="")person="user"
+let person="";
+while(person==""||person==null)
+ person = prompt("Please enter your name", "user");
 window.localStorage.setItem("user",person);
 
 
